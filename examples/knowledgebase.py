@@ -1,6 +1,4 @@
 
-
-
 from pyswip import *
 
 
