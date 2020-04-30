@@ -15,8 +15,8 @@ sudoku(Pss) :-
     blocks(R1, R2, R3), blocks(R4, R5, R6), blocks(R7, R8, R9), #inisialisasi 9 blok 
     label(Ps).
 
-columns([], [], [], [], [], [], [], [], []). #deklarasi setiap nilai dalam  kolom
-columns([A|As],[B|Bs],[C|Cs],[D|Ds],[E|Es],[F|Fs],[G|Gs],[H|Hs],[I|Is]) :- 
+columns([], [], [], [], [], [], [], [], []). #deklarasi kolom
+columns([A|As],[B|Bs],[C|Cs],[D|Ds],[E|Es],[F|Fs],[G|Gs],[H|Hs],[I|Is]) :- #deklarasi nilai kolom
     all_different([A,B,C,D,E,F,G,H,I]), #membuat nilai setiap kolom berbeda dalam satu baris
     columns(As, Bs, Cs, Ds, Es, Fs, Gs, Hs, Is).
 
