@@ -34,14 +34,15 @@ def main():
     prolog.consult("prolog_file/coins.pl")     #membuka file coins.pl
     count = int(input("Berapa jumlah koin(default: 100)? ") or 100)     #menginputkan nilai count
     total = int(input("Jumlah target total (default: 500)? ") or 500)   #menginputkan nilai total
+    #melakukan perulangan dengan menampilkan nilai yang ada di dalam list
     for i, soln in enumerate(prolog.query("Koin(S, %d, %d)." % (count,total))):
         # [1,5,10,50,100]
         S = zip(soln["S"], [1, 5, 10, 50, 100])
         print(i),
         for c, v in S:
-            print("%dx%d" % (c,v)),
+            print("%dx%d" % (c,v)),    #menampilkan angka perkalian
         print
-    list(prolog.query("coins(S, %d, %d)." % (count,total)))
+    list(prolog.query("Koin(S, %d, %d)." % (count,total)))   #menampilkan seluruh list
 
 
 if __name__ == "__main__":
