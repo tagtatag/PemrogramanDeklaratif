@@ -1,4 +1,4 @@
-#sebuah program untuk mengubah urutan di step(langkah)
+#sebuah program yang digunakan untuk memindahkan urutan dari setiap step
 
 
 from collections import deque                       #import library collections
@@ -7,28 +7,31 @@ from pyswip.prolog import Prolog                    #import library pyswip
 from pyswip.easy import getList, registerForeign
 
 
-class Notifier:                 #definisi dari notifier
-    def __init__(self, fun):
-        self.fun = fun
+class Notifier:                 #membuat class dengan nama notifier
+    #pemanggilan fungsi
+    def __init__(self, fun):    #mendeklarasikan variabel self, fun
+        self.fun = fun          #mendeklrasikan fun. menngunakan kata self yang menunjukan bahwa fun merupaka milik class Tower
 
-    def notify(self, t):
+    def notify(self, t):        #membuat fungsi notify
         return not self.fun(t)           #return not self.fun(getList(t))
     notify.arity = 1
 
 
-class Tower:            #definisi dari Tower
-    def __init__(self, N=3, interactive=False):
-        """N is the number of disks
+class Tower:            #membuat class dengan nama Tower
+
+    #pemanggilan fungsi
+    def __init__(self, N=3, interactive=False):    #mendeklarasikan variabel self, N=3, dan interactive=False
+        """N adalah nomer dari disks
         """
-        self.N = N
+        self.N = N                  #mendeklarasikan N menggunakan kata self yang menunjukkan bahwa N merupakan milik dari class Tower
         self.disks = dict(left=deque(range(N, 0, -1)), center=deque(), right=deque())
         self.started = False
         self.interactive = interactive
-        self.step = 0
+        self.step = 0                   #mendeklarasikan step
 
-    def move(self, r):
+    def move(self, r):                  #membuat fungsi move
         if not self.started:
-            self.step += 1
+            self.step += 1              #mendeklarasikan step
             self.draw()
             self.started = True
         disks = self.disks
@@ -36,9 +39,10 @@ class Tower:            #definisi dari Tower
         self.step += 1
         return self.draw()
 
-    def draw(self):
+    def draw(self):                     #membuat fungsi draw
         disks = self.disks
-        print("\n Step", self.step)
+        print("\n Step", self.step)     #mencetak niali step dengan didahului kata self yang artinya memanggil dirinya sendiri kemudian memanggil step
+        #menggunakan perulanagn for
         for i in range(self.N):
             n = self.N - i - 1
             print(" "),
@@ -52,11 +56,11 @@ class Tower:            #definisi dari Tower
         print(" ", "L", "C", "R")
         if self.interactive:
             cont = input("Press 'n' to finish: ")
-            return cont.lower() == "n"
+            return cont.lower() == "n"      #digunakan untuk mengakhiri program
 
 
-def main():
-    N = 3
+def main():             #digunakan untuk membuat fungsi main()
+    N = 3               #pendeklarasian nilai N adalah 3
     INTERACTIVITY = True
 
     prolog = Prolog()
