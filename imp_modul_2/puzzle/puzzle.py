@@ -1,11 +1,11 @@
 
-from pyswip.prolog import Prolog
+from pyswip.prolog import Prolog                #import library pyswip
 
 
 
 def main():
     prolog = Prolog()
-    prolog.consult("prolog_file/puzzle1.pl")
+    prolog.consult("prolog_file/puzzle1.pl")    #membuka file prolog puzzle.pl
     for soln in prolog.query("solve(B)."):
 
         B = soln["B"]
