@@ -1,13 +1,19 @@
 
-from pyswip.prolog import Prolog
+#sebuah program untuk menyelesaikan game puzzle yang terdiri dari 8 angka
+#dalam 1 baris atau garis (3 angka), jumlah angka harus 6
+#dalam satu kotak keseluruhan (8 angka), jumlah angka harus 15
+
+
+
+from pyswip.prolog import Prolog                #import library pyswip
 
 
 
 def main():
     prolog = Prolog()
-    prolog.consult("prolog_file/puzzle1.pl")
+    prolog.consult("prolog_file/puzzle1.pl")    #membuka file prolog puzzle.pl
     for soln in prolog.query("solve(B)."):
-        #B = eval(soln["B"])
+
         B = soln["B"]
         # [NW,N,NE,W,E,SW,S,SE]
         print("%d %d %d" % tuple(B[:3]))
