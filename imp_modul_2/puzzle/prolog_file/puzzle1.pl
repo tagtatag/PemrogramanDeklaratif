@@ -1,4 +1,4 @@
-% This example is adapted from http://eclipse.crosscoreop.com/examples/puzzle1.pl.txt
+
 
 :- use_module(library('bounds')).
 
