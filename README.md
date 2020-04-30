@@ -3,6 +3,9 @@ Tugas Besar Pemrograman Deklaratif
 
 Implementasi Bahasa Prolog (Programing Logic) dengan kombinasi Bahasa Python
 
+Link Youtube Penjelasan
+ - https://www.youtube.com/watch?v=2I2P_OZdpgk
+
 Program menggunakan Package pyswip
 
 file yang kami gunakan
