@@ -1,4 +1,10 @@
 
+#sebuah program untuk menyelesaikan game puzzle yang terdiri dari 8 angka
+#dalam 1 baris atau garis (3 angka), jumlah angka harus 6
+#dalam satu kotak keseluruhan (8 angka), jumlah angka harus 15
+
+
+
 from pyswip.prolog import Prolog                #import library pyswip
 
 

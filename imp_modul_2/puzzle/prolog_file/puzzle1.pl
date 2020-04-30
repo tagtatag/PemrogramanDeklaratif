@@ -2,13 +2,13 @@
 
 :- use_module(library('bounds')).
 
-solve(Board) :-
-	Board = [NW,N,NE,W,E,SW,S,SE],
-	Board in 0..12,
-	sum(Board, #=, 12),
-	NW + N + NE #= 5,
-	NE + E + SE #= 5,
-	NW + W + SW #= 5,
-	SW + S + SE #= 5,
+solve(Papan) :-
+	Papan = [NW,N,NE,W,E,SW,S,SE],
+	Papan in 0..12,
+	sum(Papan, #=, 15),
+	NW + N + NE #= 6,
+	NE + E + SE #= 6,
+	NW + W + SW #= 6,
+	SW + S + SE #= 6,
 
-	label(Board).
+	label(Papan).
