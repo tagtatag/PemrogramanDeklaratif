@@ -5,6 +5,12 @@ Implementasi Bahasa Prolog (Programing Logic) dengan kombinasi Bahasa Python
 
 Program menggunakan Package pyswip
 
+file yang kami gunakan
+ - python 3.8.0 64 bit
+ - swi prolog 8.0 64 bit
+ * tidak apa apa menggunakan versi lebih tinggi atau lebih rendah
+   asalkan sesuai bit antara python dengan swi prolog nya
+
 Cara Instalasi pyswip
 
 Opsi 1 :

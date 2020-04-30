@@ -14,9 +14,9 @@ from pyswip import Prolog               #import library pyswip
 letters = "S E N D M O R Y".split()
 prolog = Prolog()
 prolog.consult("prolog_file/money.pl")              #membuka file money.pl
-for result in prolog.query("sendmore(X)"):
+for result in prolog.query("sendmore(X)"):	#menjalankan predikat sendmore
     r = result["X"]
     for i, letter in enumerate(letters):
-        print(letter, "=", r[i])
+        print(letter, "=", r[i])		#mencetak huruf = angka yanng ada
 
 print("That's all...")
