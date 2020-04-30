@@ -7,7 +7,7 @@ def main():
     prolog = Prolog()
     prolog.consult("prolog_file/puzzle1.pl")
     for soln in prolog.query("solve(B)."):
-        #B = eval(soln["B"])
+        
         B = soln["B"]
         # [NW,N,NE,W,E,SW,S,SE]
         print("%d %d %d" % tuple(B[:3]))
