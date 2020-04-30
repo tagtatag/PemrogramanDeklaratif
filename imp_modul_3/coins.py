@@ -26,15 +26,15 @@
 # 100 coins must sum to $5.00
 
 
-from pyswip.prolog import Prolog
+from pyswip.prolog import Prolog   #import library pyswip
 
 
 def main():
     prolog = Prolog()
-    prolog.consult("prolog_file/coins.pl")
-    count = int(input("Berapa jumlah koin(default: 100)? ") or 100)
-    total = int(input("Jumlah target total (default: 500)? ") or 500)
-    for i, soln in enumerate(prolog.query("coins(S, %d, %d)." % (count,total))):
+    prolog.consult("prolog_file/coins.pl")     #membuka file coins.pl
+    count = int(input("Berapa jumlah koin(default: 100)? ") or 100)     #menginputkan nilai count
+    total = int(input("Jumlah target total (default: 500)? ") or 500)   #menginputkan nilai total
+    for i, soln in enumerate(prolog.query("Koin(S, %d, %d)." % (count,total))):
         # [1,5,10,50,100]
         S = zip(soln["S"], [1, 5, 10, 50, 100])
         print(i),
