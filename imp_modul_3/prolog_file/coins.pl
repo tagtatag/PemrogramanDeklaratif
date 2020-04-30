@@ -1,6 +1,3 @@
-
-% Coins -- 2007 by Yuce Tekol <yucetekol@gmail.com>
-
 :- use_module(library('bounds')).
 
 coins(S, Count, Total) :-
