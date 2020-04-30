@@ -1,5 +1,4 @@
 
-% Prolog Sudoku Solver (C) 2007 Markus Triska (triska@gmx.at)
 % Public domain code.
 
 :- use_module(library(bounds)).
